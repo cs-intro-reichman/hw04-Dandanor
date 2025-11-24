@@ -8,7 +8,7 @@ public class Primes {
             arr[i]=true;
         } 
         for (int i=2; i<=n;i++){
-            for(int j=i+1;j<n;j++){
+            for(int j=i+1;j<=n;j++){
                 if (j%i==0){
                     arr[j]=false;
                 }
