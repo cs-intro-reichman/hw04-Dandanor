@@ -33,17 +33,23 @@ public class MyString {
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
         boolean check=true;
-        if ((str1.indexOf(str2.charAt(0))==-1)){
+            if(str2.length()==0){
+            return true;
+        }
+        else if ((str1.indexOf(str2.charAt(0))==-1)||str1.length()<str2.length()){
             return false;
         }
         else{
             char firstc=str2.charAt(0);
-            for (int i=0; i<str1.length();i++){
+            for (int i=0; i<=str1.length()-str2.length();i++){
+                check=false;
                 if(str1.charAt(i)==firstc){
-                    check=true;
                     for (int j=0;j<str2.length();j++){
                         if(str1.charAt(i+j)!=str2.charAt(j)){
-                            check = false;
+                            break;
+                        }
+                        else if(j==str2.length()-1&&str1.charAt(i+j)==str2.charAt(j)){
+                            return true;
                         }
                     }
                 }
