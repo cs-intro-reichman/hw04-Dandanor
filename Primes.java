@@ -4,10 +4,10 @@ public class Primes {
         boolean[] arr = new boolean[n+1];
         arr[0]=false;
         arr[1]=false;
-        for (int i=2;i<n;i++){ //assign true to every array spot
+        for (int i=2;i<=n;i++){ //assign true to every array spot
             arr[i]=true;
         } 
-        for (int i=2; i<n;i++){
+        for (int i=2; i<=n;i++){
             for(int j=i+1;j<n;j++){
                 if (j%i==0){
                     arr[j]=false;
