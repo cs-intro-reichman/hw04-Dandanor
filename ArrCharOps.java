@@ -137,7 +137,7 @@ public class ArrCharOps {
         }
         else{
             int j=0;
-        for (int i=0;i<arr.length;i++){
+        for (int i=arr.length-1;i>0;i--){
             hash+=arr[j]*Math.pow(7,i);
             j++;
             }
