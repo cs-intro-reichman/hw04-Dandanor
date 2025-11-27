@@ -130,14 +130,14 @@ public class ArrCharOps {
      *  where arr[i] is the i'th character of the array, and n is the array's length.
      *  The hash value of an empty array is zero.
      */
-    public static long hashCode(char[] arr) {
-        int hash = 0;
+    public static long hashCode(char[] arr) { //**
+        long hash = 0;
         if(arr==null||arr.length==0){
             return 0;
         }
         else{
             int j=0;
-        for (int i=arr.length-1;i>=0;i--){
+        for (int i=0;i<arr.length;i--){
             hash+=arr[j]*Math.pow(7,i);
             j++;
             }
