@@ -51,7 +51,7 @@ public class ArrCharOps {
             return false;
         }
         else{
-            for (int i=0,j=0;i<=arr1.length;i++,j++){
+            for (int i=0,j=0;i<arr1.length;i++,j++){
                 if (arr1[i]!=arr2[j]){
                     return false;
                 }
