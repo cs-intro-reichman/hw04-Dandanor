@@ -131,7 +131,7 @@ public class ArrCharOps {
      *  The hash value of an empty array is zero.
      */
     public static long hashCode(char[] arr) { //**
-        long hash = 0;
+        int hash = 0;
         if(arr==null||arr.length==0){
             return 0;
         }
